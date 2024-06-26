@@ -1,9 +1,11 @@
     <ul class="sidebar">
         <li><button class="closebtn">X</button></li>
         <li><a href="mostrarProductos.php">Productos</a></li>
-        <li><a href="subirProducto.php">Nuevo Producto</a></li>
         <li><a href="ventas.php">Ventas</a></li>
-        <li><a href="#">Estadisticas</a></li>
+        <li><a href="estadisticas3.php">Estadisticas</a></li>
+        <li><a href="proveedores.php">Proveedores</a></li>
+        <li><a href="listapedidos.php">Historial de pedidos</a></li>
+        <li><a href="listamensajes.php">Lista de mensajes</a></li>
         <li class="tiendabtn"><a href="articulos.php"><h3>Ir a la tienda</h3></a></li>
     </ul>
 
@@ -11,7 +13,6 @@
 <style>
     .sidebar {
         background-color: whitesmoke;
-        height: 100%;
         width: 200px;
         transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
     }

@@ -19,7 +19,7 @@
           <a href="login-tienda.php" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">Log In</a>
         </li>
         <li>
-          <a href="signin-tienda.php" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">Register</a>
+          <a href="signin-tienda.php" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">Sign Up</a>
         </li>
     
       </ul>
@@ -32,9 +32,16 @@
 
 <nav class="bg-white border-gray-200">
   <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-    <a href="articulos.php" class="flex items-center">
+    <div class="leftnav sm:flex">
+      <a href="articulos.php" class="flex items-center mr-10">
         <span class="self-center text-2xl font-semibold whitespace-nowrap ">Tienda</span>
-    </a>
+      </a>
+      <form action="articulos.php" method="GET" id="search_form">
+      <input type="search" placeholder="Busca tu producto" class="rounded-lg" id="q" name="q">
+      <button type="submit" class="text-white bg-blue-700 hover:cursor-pointer hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Buscar</button>
+    </form>
+    </div>
+    
     <div class="block w-auto" id="navbar-dropdown">
       <ul class="flex font-medium p-0 border border-gray-100 rounded-lg flex-row sm:space-x-8 mt-0 border-0 bg-white">
         <li>
@@ -84,6 +91,11 @@
             <div id="dropdownNavbarUser" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44">
               <div class="p-2">
                 <a href="settingsuser.php?user=<?= $_SESSION["userid_tienda"] ?>" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">Settings</a>
+              </div>
+              <div class="p-2">
+                <a href="compras.php?user=<?= $_SESSION["userid_tienda"] ?>" class ="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">
+                  Mis compras
+                </a>
               </div>
               <div class="p-2">
             <a href="api/signouttienda.php" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">Sign Out</a>
