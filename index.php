@@ -27,7 +27,7 @@ if(!isset($_SESSION['login_user'])){ //if login in session is not set
         include_once("./api/sidebar.php")
     ?>
         <section class="main">
-            <h4>Bienvenido</h4>
+            <h2>Bienvenido</h2>
             <section class="tabla-usuarios">
                 <?php include("mostrarUsuarios.php") ?>
             </section>
@@ -35,5 +35,6 @@ if(!isset($_SESSION['login_user'])){ //if login in session is not set
         </div>     
 </body>
 <script src="navbar.js"></script>
+<script src="./api/LoadNotification.js"></script>
 </html>
 
